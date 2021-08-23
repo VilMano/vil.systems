@@ -1,0 +1,58 @@
+*{
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+body{
+    background-color: #ececec;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    transition: 0.5s;
+}
+
+.container{
+    margin: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-content: center;
+}
+
+.container-left{
+    width: 50%;
+    display: inherit;
+    flex-direction: column;
+}
+
+.container-right{
+    width: 50%;
+    display: inherit;
+    flex-direction: column;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}

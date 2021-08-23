@@ -1,0 +1,90 @@
+html{
+    font-size: 16px;
+}
+
+*{
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    transition: 0.5s;
+    background-color: #ececec;
+}
+
+.container{
+    background-color: inherit;
+    margin: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-content: center;
+}
+
+.container-left{
+    width: 50%;
+    display: inherit;
+    flex-direction: column;
+}
+
+.container-right{
+    width: 50%;
+    display: inherit;
+    flex-direction: column;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#gallery-html{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 80%;
+}
+
+#gallery-link{
+    color: #000;
+}
+
+@media only screen and (max-width: 960px){
+    .container{
+        display: inherit;
+        flex-direction: column;
+    }
+
+    .container-left{
+        width: 100%;
+        display: flex;
+    }
+
+    .container-right{
+        width: 100%;
+        display: flex;
+    }
+
+    #gallery-html{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

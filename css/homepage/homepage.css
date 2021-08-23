@@ -1,0 +1,112 @@
+*{
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+body{
+    background-color: #ececec;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 85vh;
+}
+
+.main{
+    display: inherit;
+    flex-direction: inherit;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.title{
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 3rem;
+}
+
+.nav{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button{
+    border-radius: 13px;
+    background: linear-gradient(225deg, hsl(0, 0%, 79%), #f0f0f0);
+    box-shadow:  -8px 8px 16px #bebebe,
+                8px -8px 16px #ffffff;
+             height: 3rem;
+             width: 6rem;
+             border-style: none;
+    margin: 2rem 0.5rem 1rem 0.5rem;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+#vil-span{
+    transition: 0.5s;
+}
+
+#systems-span{
+    transition: 0.5s;
+}
+
+#vil-span:hover{
+    color: rgb(218, 106, 61);
+    text-shadow: 1px 1px 3px grey;
+}
+
+#systems-span:hover{
+    color: rgb(31, 98, 143);
+    text-shadow: 1px 1px 3px #b9b9b9;;
+}
+
+#vil-span::selection{
+    background:#ececec;
+}
+
+#systems-span::selection{
+    background:#ececec;
+}
+
+.minecraft-a{
+    justify-content: center;
+}
+
+
+
+a{
+    color: #e3e3e3;
+}
+
+@media only screen and (max-width: 960px)
+{
+    .nav{
+        display: inherit;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button{
+        height: 7rem;
+        width: inherit;
+    }
+
+    .title{
+        font-size: 2rem;
+        margin-top: 4rem;
+    }
+}

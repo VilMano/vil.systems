@@ -1,0 +1,25 @@
+.nav-buttons{
+    background-color: #3e3a3a;
+    color: rgb(226, 226, 226);
+}
+
+
+#homepage-btn-nav:hover{
+    background-color: #1a1a1a;
+}
+
+#gallery-btn-nav:hover{
+    background-color: #1a1a1a;
+}
+
+#music-btn-nav:hover{
+    background-color: #1a1a1a;
+}
+
+#blog-btn-nav:hover{
+    background-color: #1a1a1a;
+}
+
+#about-btn-nav:hover{
+    background-color: #1a1a1a;
+}

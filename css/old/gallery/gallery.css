@@ -1,0 +1,163 @@
+html{
+    font-size: 16px;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Lato';
+    /* font-size: 24px; */
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    transition: 0.5s;
+}
+
+.container{
+    margin: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-content: center;
+}
+
+.title{
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header-column{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#switch-div{
+    text-align: center;
+}
+
+
+.picture{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: .5s;
+}
+
+.picture:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    transition: .5s;
+}
+
+.clickable:hover{
+    cursor:pointer;
+}
+
+#vertical{
+    display: inline-block;
+}
+
+#vertical:hover{
+    cursor: pointer;
+}
+
+#vertical::after{
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+
+#vertical:hover::after{
+    width: 100%;
+}
+
+#horizontal:hover{
+    cursor: pointer;
+}
+
+#horizontal{
+    display: inline-block;
+}
+
+#horizontal::after{
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+
+#horizontal:hover::after{
+    width: 100%;
+}
+
+@media only screen and (min-width: 1400px){
+    .horizontal-picture{
+        max-height: 28rem;
+    }
+
+    .vertical-picture{
+        max-height: 55rem;
+    }
+
+    .vertical-row{
+        max-width: 73.652rem;
+    }
+
+    .horizontal-row{
+        max-width: 83.635rem;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1400px){
+    .horizontal-picture{
+        max-height: 21rem;
+    }
+
+    .vertical-picture{
+        max-height: 36rem;
+    }
+
+    .horizontal-row{
+        max-width: 62.727rem;
+    }
+
+    .vertical-row{
+        max-width: 48.208rem;
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .row{
+        flex-direction: column;
+        max-width: 30rem;
+    }
+
+    .picture{
+        max-width: 35rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: .5s;
+    }
+
+    .picture:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+        transition: .5s;
+    }
+
+
+}

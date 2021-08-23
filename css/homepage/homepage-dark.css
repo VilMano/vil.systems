@@ -1,0 +1,13 @@
+body{
+    background-color: #292929;
+    color: #e3e3e3;
+}
+
+.button{
+    background: linear-gradient(225deg, hsl(0, 0%, 82.4%), #8e8d8d);
+    box-shadow: none;
+}
+
+a{
+    color: #e3e3e3;
+}
