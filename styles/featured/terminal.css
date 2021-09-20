@@ -1,0 +1,100 @@
+*{
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+body{
+    background-color: #292929;
+    color: #e3e3e3;
+}
+
+a{
+    color: azure;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-left: 2px solid #313131;
+    border-top: 3px solid #313131;
+    height: 4rem;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.green{
+    color: #53be4a;
+}
+
+.blue{
+    color:#2e3cbd;
+}
+
+#location{
+    display: flex;
+    flex-direction: row;
+}
+
+.welcome-div{
+    display: flex;
+    flex-direction: column;
+}
+
+#pages{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#webpages {
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    margin-left: 0;
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+
+/* SPANS */
+
+#homepage:hover{
+    cursor: pointer;
+}
+
+#music:hover{
+    cursor: pointer;
+}
+
+#gallery:hover{
+    cursor: pointer;
+}
+
+#blog:hover{
+    cursor: pointer;
+}
+
+#about:hover{
+    cursor: pointer;
+}

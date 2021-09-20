@@ -1,0 +1,192 @@
+*{
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+body{
+    background-color: #292929;
+}
+
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.container-left{
+    width: 20%;
+    height: 80vh;
+    display: inherit;
+    flex-direction: column;
+    border-radius: 5px 0 0 0;
+    color:rgb(226, 226, 226);
+}
+
+.container-right{
+    width: 80%;
+    height: 80vh;
+    display: inherit;
+    flex-direction: column;
+    border-radius: 0 5px 0 0;
+}
+
+.row{
+    display: inherit;
+    flex-direction: row;
+    width: 100%;
+}
+
+.column{
+    display: inherit;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.border-b{
+    border-radius: 0 0 0 5px;
+}
+
+.song-column{
+    width: 30%;
+    background-color: inherit;
+}
+
+#pfp{
+    width: 100%;
+    border-radius: 5px 0 0 0;
+}
+
+.album-title{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: slateblue;
+    width: 100%;
+    border-radius: 0 5px 0 0;
+}
+
+.album-p{
+    background-color: inherit;
+}
+
+.song-row{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inherit;
+    width: 98%;
+    margin-right: 2%;
+}
+
+.range-div{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    background-color: inherit;
+}
+
+.bg-left{
+    background-color:#222;
+
+}
+
+.bottom-1{
+    padding-bottom: 1rem;
+}
+
+.top-1{
+    padding-top: 1rem;
+}
+
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    background: black;
+    height: 0.4rem;
+}
+
+.input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: black;
+
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 18px;
+    width: 18px;
+    border-radius: 18px;
+    background: black;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+}
+
+.slider::-moz-range-thumb{
+    background-color: black;
+    border-style: none;
+}
+
+.tracknum{
+    width: 5rem;
+    background-color: inherit;
+    text-align: center;
+}
+
+.num{
+    background-color: inherit;
+}
+
+.songname{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: inherit;
+}
+
+.darkrow{
+    background-color: #7869d7;;
+}
+
+.lightrow{
+    background-color: #9b8cf4;
+}
+
+span{
+    background-color: inherit;
+}
+
+.actionbtn{
+    background-color: inherit;
+}
+
+#player{
+    display: none;
+}
+
+.left-p{
+    margin-left: 0.5rem;
+}
+
+.songstatus{
+    display: none;
+}
+
+@media only screen and (max-width: 960px){
+    #infoartist{
+        display: none;
+    }
+
+    .container{
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 7rem;
+        margin-top: 0;
+    }
+
+    #music{
+        width: 100%;
+    }
+}
