@@ -3,7 +3,7 @@
         private $dbh;
 
         function openConn(){
-            $this->dbh = new PDO("mysql:host=94.60.78.129;dbname=mcstatus;", "root", "Tool+0112358");
+            $this->dbh = new PDO("mysql:host=192.168.1.146;dbname=mcstatus;", "mc", "vilminecraft");
 
             return $this->dbh;
         }

@@ -79,33 +79,15 @@
 
         <div id="navbar"></div>
         <script src="/scripts/navbar.js"></script>
-
-        <script type="text/javascript">
-            var darkmode = false;
-
-            document.getElementById("sun").onclick = function(){
-                document.getElementById("stylesheet").href = "../css/minecraft/minecraft-light.css";
-                document.getElementById("style-nav").href = "../css/navbar/navbar.css";
-                document.getElementById("moon").src = "/media/images/icons/moon.png";
-                document.getElementById("sun").src = "/media/images/icons/sun.png";
-            };
-
-            document.getElementById("moon").onclick = function(){
-                document.getElementById("stylesheet").href = "../css/minecraft/minecraft-dark.css";
-                document.getElementById("style-nav").href = "../css/navbar/navbar-dark.css";
-                document.getElementById("moon").src = "/media/images/icons/moon_light.png";
-                document.getElementById("sun").src = "/media/images/icons/sun_light.png";
-            };
-        </script>
         <script>
-            $("#card-body").load("../views/onlineplayers.view.php");
+            $("#card-body").load("../views/onlineplayers.views.php");
             const interval = setInterval(function(){
-                $("#card-body").load("../views/onlineplayers.view.php");
+                $("#card-body").load("../views/onlineplayers.views.php");
             }, 3000);
 
-            $("#card-body-log").load("../views/minecraft-logs.view.php");
+            $("#card-body-log").load("../views/minecraft-logs.views.php");
             const logs = setInterval(function(){
-                $("#card-body-log").load("../views/minecraft-logs.view.php");
+                $("#card-body-log").load("../views/minecraft-logs.views.php");
             }, 3000);
 
         </script>
