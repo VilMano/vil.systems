@@ -3,8 +3,8 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    require('../../models/minecraft-data.class.php');
-    require('../../models/minecraft.class.php');
+    require('../models/minecraft-data.class.php');
+    require('../models/minecraft.class.php');
 
     $mcDB = new minecraftData();
     $mcDB = $mcDB->openConn();
