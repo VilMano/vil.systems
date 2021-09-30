@@ -9,6 +9,6 @@
     $data = new Data();
     $tempConn = new Temp($data->getTempConnection());
 
-    $tempConn->insertVotes($_POST['pictures']);
+    $tempConn->insertVotes($_POST['pictures'], $_POST['token']);
 ?>
 

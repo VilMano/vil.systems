@@ -9,14 +9,19 @@
         }
 
         function getPicturesByToken($token){
-            $sql = 'SELECT id FROM token
+            $sql = 'SELECT id, used FROM token
                     WHERE token = :token;
             ';
 
             $query = $this->conn->prepare($sql);
             $query->bindParam(':token', $token);
             $query->execute();
-            $token_id = $query->fetch()[0];
+            $token = $query->fetch();
+            $token_id = $token["id"];
+
+            if($token["used"] == 1){
+                return array();
+            }
 
             $sql = 'SELECT temp.url, id, downvote FROM temp
                     LEFT JOIN temp_token 
@@ -30,7 +35,7 @@
             return $query->fetchAll();
         }
 
-        function insertVotes($idlist){
+        function insertVotes($idlist, $token){
             if(!empty($idlist)){
                 try{
                     $this->conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
@@ -45,10 +50,17 @@
                         $query->bindParam(':id', $idint, PDO::PARAM_INT);
                         $query->execute();
                     }
+
+                    $sql = 'UPDATE token SET used = 1 WHERE token = :token';
+                    $query = $this->conn->prepare($sql);
+                    $query->bindParam(':token', $token);
+                    $query->execute();
                 }catch(PDOException $e){
                     throw new Exception($e);
                 }
             }
+
+
         }
     }
 ?>

@@ -65,19 +65,32 @@
                     $i = 0;
                     foreach($album->pictures as $picture){
                         $path = explode("gallery.vil.systems" , $picture["url"]);
+
+                        $fp = fopen($picture["url"], 'rb');
+                        $pictureOri = exif_read_data($fp);
+                        $height = $pictureOri['COMPUTED']['Height'];
+                        $width = $pictureOri['COMPUTED']['Width'];
+
+                        $orientation = 'horizontal-picture';
+                        $orientationBox = 'horizontal';
+                        if( $width < $height){
+                            $orientation = 'vertical-picture';
+                            $orientationBox = 'vertical';
+                        }
+
                         if($i == 0){
                             print("
                             <div class=\"row\">
-                                <div class=\"square-picture\">
-                                    <img loading=\"lazy\" onclick=\"openAlbum(". $album->id .")\" class=\"picture horizontal-picture top-left-round\" id=\"picture-". $picture["id"] ."\" src=\"". $path[1] ."\" alt=\"\">
+                                <div class=\"square-picture  ". $orientationBox ."\">
+                                    <img loading=\"lazy\" onclick=\"openAlbum(". $album->id .")\" class=\"picture ". $orientation ." top-left-round\" id=\"picture-". $picture["id"] ."\" src=\"". $path[1] ."\" alt=\"\">
                                 </div>
                             ");
                         }
 
                         if($i == 1){
                             print("
-                                <div class=\"square-picture\">
-                                    <img loading=\"lazy\" onclick=\"openAlbum(". $album->id .")\" class=\"picture horizontal-picture top-right-round\" id=\"picture-". $picture["id"] ."\" src=\"". $path[1] ."\" alt=\"\">
+                                <div class=\"square-picture ". $orientationBox ."\">
+                                    <img loading=\"lazy\" onclick=\"openAlbum(". $album->id .")\" class=\"picture ". $orientation ." top-right-round\" id=\"picture-". $picture["id"] ."\" src=\"". $path[1] ."\" alt=\"\">
                                 </div>
                             </div>
                             ");
@@ -86,16 +99,16 @@
                         if($i == 2){
                             print("
                             <div class=\"row\">
-                                <div class=\"square-picture\">
-                                    <img loading=\"lazy\" onclick=\"openAlbum(". $album->id .")\" class=\"picture horizontal-picture bottom-left-round\" id=\"picture-". $picture["id"] ."\" src=\"". $path[1] ."\" alt=\"\">
+                                <div class=\"square-picture ". $orientationBox ."\">
+                                    <img loading=\"lazy\" onclick=\"openAlbum(". $album->id .")\" class=\"picture ". $orientation ." bottom-left-round\" id=\"picture-". $picture["id"] ."\" src=\"". $path[1] ."\" alt=\"\">
                                 </div>
                             ");
                         }
 
                         if($i == 3){
                             print("
-                                <div class=\"square-picture\">
-                                    <img loading=\"lazy\" onclick=\"openAlbum(". $album->id .")\" class=\"picture horizontal-picture bottom-right-round\" id=\"picture-". $picture["id"] ."\" src=\"". $path[1] ."\" alt=\"\">
+                                <div class=\"square-picture ". $orientationBox ."\">
+                                    <img loading=\"lazy\" onclick=\"openAlbum(". $album->id .")\" class=\"picture ". $orientation ." bottom-right-round\" id=\"picture-". $picture["id"] ."\" src=\"". $path[1] ."\" alt=\"\">
                                 </div>
                             </div>
                             ");
