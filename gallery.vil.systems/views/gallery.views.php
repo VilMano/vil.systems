@@ -126,5 +126,10 @@
         <div id="navbar"></div>
         <script src="../scripts/transform-pictures.js"></script>
         <script src="../scripts/navbar.js"></script>
+        <script>
+            function openAlbum(id){
+                location.replace("https://gallery.vil.systems/views/single.view.php?id=" + id);
+            }
+        </script>
     </body>
 </html>
